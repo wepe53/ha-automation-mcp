@@ -1,0 +1,22 @@
+name: HA Automation MCP
+version: "0.1.0"
+slug: ha_automation_mcp
+description: MCP server for managing Home Assistant automations
+arch:
+  - amd64
+  - aarch64
+startup: application
+boot: auto
+init: false
+homeassistant_api: true
+hassio_api: false
+hassio_role: default
+options:
+  access_token: ""
+schema:
+  access_token: password
+ports:
+  8765/tcp: null
+ports_description:
+  8765/tcp: MCP HTTP server (keep unexposed; use authenticated reverse proxy)
+map: []
